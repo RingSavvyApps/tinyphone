@@ -19,8 +19,8 @@
 
 #define STRING_REMOVE_CHAR(str, ch) str.erase(std::remove(str.begin(), str.end(), ch), str.end())
 
-#define REMOTE_CONFIG_URL "http://fkrt.it/tpconf"
-#define REMOTE_CONFIG_URL_SECONDARY "https://raw.githubusercontent.com/voiceip/tinyphone/%s/config.json"
+#define REMOTE_CONFIG_URL "https://diegodjty.github.io/tinyphone/config.json"
+#define REMOTE_CONFIG_URL_SECONDARY "https://diegodjty.github.io/tinyphone/config.json"
 
 #define HEADER_SECURITY_CODE "X-SECURITY-CODE"
 
