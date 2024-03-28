@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?define UpgradeCode = "2bbe32a2-1e37-4663-97d4-cb9e5c7dfde3"?>
-<?define BaseName = "RS Tinyphone"?>
+<?define BaseName = "Savvy Phone"?>
 <?if $(var.tinyphone.Configuration) = "Debug" ?>
 <?define ShortcutName = "$(var.BaseName) Debug" ?>
 <?else?>
@@ -9,7 +9,7 @@
 <?define ProductVersion=!(bind.FileVersion.TinyPhone.exe)?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
   xmlns:fw="http://schemas.microsoft.com/wix/FirewallExtension" >
-  <Product Id="*" Name="$(var.BaseName)" Language="1033" Version="$(var.ProductVersion)" Manufacturer="Flipkart India" UpgradeCode="$(var.UpgradeCode)">
+  <Product Id="*" Name="$(var.BaseName)" Language="1033" Version="$(var.ProductVersion)" Manufacturer="Answering Legal" UpgradeCode="$(var.UpgradeCode)">
     <Package InstallerVersion="200" Compressed="yes" Description="$(var.ShortcutName) $(var.ProductVersion) Installer" InstallScope="perMachine" />
     <?if $(var.tinyphone.Configuration) != "Debug" ?>
     <MajorUpgrade Schedule="afterInstallInitialize" AllowSameVersionUpgrades="yes"  DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -86,7 +86,7 @@
     </ComponentGroup>
     <ComponentGroup Id="ProductSupportComponents" Directory="ApplicationProgramsFolder">
       <Component Id="ApplicationShortcut" Guid="{AE75A17D-3EBF-4B68-AA32-73D18D983317}">
-        <Shortcut Id="ApplicationStartMenuShortcut" Name="$(var.ShortcutName)" Description="RS Softphone" Target="[#TinyPhone.exe]" WorkingDirectory="INSTALLFOLDER" />
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="$(var.ShortcutName)" Description="Savvy Phone" Target="[#TinyPhone.exe]" WorkingDirectory="INSTALLFOLDER" />
         <Shortcut Id="UninstallProduct"	Name="Uninstall $(var.ShortcutName)" Description="Uninstalls $(var.ShortcutName)" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]"/>
         <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
         <RegistryValue Root="HKCU" Key="Software\Flipkart\TinyPhone" Name="installed" Type="integer" Value="1" KeyPath="yes" />

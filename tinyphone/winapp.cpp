@@ -39,7 +39,7 @@ UINT WM_TASKBAR = 0;
 HWND Hwnd;
 HMENU Hmenu;
 NOTIFYICONDATA notifyIconData;
-TCHAR szTIP[MAX_TOOLTIP_LENGTH] = TEXT("RS TinyPhone");
+TCHAR szTIP[MAX_TOOLTIP_LENGTH] = TEXT("Savvy Phone");
 char szClassName[] = "TinyPhone";
 SPLASH splashScreen;
 
